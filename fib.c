@@ -27,13 +27,13 @@ unsigned long fibonacci_iterative(int num)
    return second_fibonacci_num;
 }
 
-int main(int argc, char *argcv[])
+int main(int argc, char *argv[])
 {
-   int command_line_integer = atoi(argcv[1]);
-   char command_line_letter = argcv[2][0];
+   int command_line_integer = atoi(argv[1]);
+   char command_line_letter = argv[2][0];
    int integer_in_file;
 
-   FILE *file_pointer = fopen(argcv[3], "r");
+   FILE *file_pointer = fopen(argv[3], "r");
    fscanf(file_pointer, "%d", &integer_in_file);
    fclose(file_pointer);
 
