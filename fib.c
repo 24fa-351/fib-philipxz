@@ -31,16 +31,14 @@ int main(int argc, char *argv[])
 {
    int command_line_integer = atoi(argv[1]);
    char command_line_letter = argv[2][0];
-   char integer_in_file[100];
-   const char *filename = argv[3];
+   int integer_in_file;
 
-
-   FILE *file_pointer = fopen(filename, "r");
-   fgets(integer_in_file, 100, file_pointer);
+   FILE *file_pointer = fopen(argv[3], "r");
+   fscanf(file_pointer, "%d", &integer_in_file);
    fclose(file_pointer);
 
    // Subtract 1 as the first number in fibonacci sequence is 0
-   int num_to_fibonacci = command_line_integer + atoi(integer_in_file) - 1;
+   int num_to_fibonacci = command_line_integer + integer_in_file - 1;
    unsigned long fibonacci_result;
 
    if (command_line_letter == 'r')
