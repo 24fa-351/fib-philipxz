@@ -1,4 +1,4 @@
-echo "Running tests..."
+maecho "Running tests..."
 echo
 
 echo "3" > test1.txt
